@@ -1,7 +1,7 @@
 import "../styles/globals.css";
 import "@celo/react-celo/lib/styles.css";
 import type { AppProps } from "next/app";
-import Layout from "components/socials/Layout";
+
 import { CeloProvider, Alfajores } from "@celo/react-celo";
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -16,9 +16,9 @@ function MyApp({ Component, pageProps }: AppProps) {
       }}
       defaultNetwork={Alfajores.name}
     >
-      <Layout>
+      
         <AnyComponent {...pageProps} />
-      </Layout>
+      
     </CeloProvider>
   );
 }
